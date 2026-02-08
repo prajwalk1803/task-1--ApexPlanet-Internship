@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ApexPlanet | Task-1 Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/favicon.svg" />
+</head>
+<body>
+  <div class="bg-blur one"></div>
+  <div class="bg-blur two"></div>
+
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#">
+        <span class="logo-badge">A</span>
+        <span>ApexPortfolio</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn ghost" id="themeBtn" title="Toggle theme">🌙</button>
+        <button class="btn menu" id="menuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container" id="home">
+      <div class="hero-left">
+        <div class="pill">🚀 Task-1 Deliverables Completed</div>
+        <h1>
+          Build. Learn. Launch.
+          <span class="grad">Modern Web Portfolio</span>
+        </h1>
+        <p class="muted">
+          A professional, responsive, animated portfolio website built using
+          <b>HTML5, CSS3, JavaScript, PHP & MySQL</b> with GitHub Pages support.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num" id="statProjects">08</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="statSkills">12</div>
+            <div class="stat-label">Skills</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="statVisitors">---</div>
+            <div class="stat-label">Visitors</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card hero-card">
+          <div class="card-top">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <div class="code">
+            <p><span class="c1">const</span> <span class="c2">developer</span> = {</p>
+            <p>  name: <span class="c3">"Your Name"</span>,</p>
+            <p>  stack: <span class="c3">["HTML","CSS","JS","PHP","MySQL"]</span>,</p>
+            <p>  goal: <span class="c3">"Full Stack Web Developer"</span></p>
+            <p>};</p>
+            <p><span class="c1">console</span>.<span class="c2">log</span>(developer);</p>
+          </div>
+          <div class="card-bottom">
+            <span class="tag">Responsive</span>
+            <span class="tag">Animations</span>
+            <span class="tag">Backend</span>
+            <span class="tag">Database</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section container" id="about">
+      <div class="section-head">
+        <h2>About Me</h2>
+        <p class="muted">
+          A quick overview of my profile, goals and what I can build.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Professional Summary</h3>
+          <p>
+            I am a passionate web developer who enjoys building clean, modern and
+            high-performance web applications. I work with HTML, CSS, JavaScript,
+            PHP and MySQL to create complete full-stack solutions.
+          </p>
+          <ul class="list">
+            <li>✅ Clean UI + UX design</li>
+            <li>✅ Responsive layout using Flexbox & Grid</li>
+            <li>✅ JavaScript validation & DOM manipulation</li>
+            <li>✅ PHP backend with MySQL database connectivity</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>HTML5 Multimedia Demo</h3>
+          <p class="muted">Audio + Video + iframe included as required.</p>
+
+          <div class="media-box">
+            <video controls class="media" poster="assets/img/poster.svg">
+              <source src="assets/media/demo.mp4" type="video/mp4" />
+              Your browser does not support video.
+            </video>
+          </div>
+
+          <div class="media-box">
+            <audio controls class="media">
+              <source src="assets/media/demo.mp3" type="audio/mpeg" />
+              Your browser does not support audio.
+            </audio>
+          </div>
+
+          <div class="media-box">
+            <iframe
+              class="media iframe"
+              src="https://www.wikipedia.org"
+              title="Embedded iframe"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section container" id="skills">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p class="muted">Displayed using modern cards + progress bars.</p>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section container" id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="muted">
+          Search and filter projects (JavaScript DOM feature).
+        </p>
+      </div>
+
+      <div class="filters">
+        <input id="searchInput" type="text" placeholder="Search projects..." />
+        <select id="filterSelect">
+          <option value="all">All Categories</option>
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+          <option value="fullstack">Full Stack</option>
+        </select>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid"></div>
+
+      <div class="card table-card">
+        <h3>HTML Table Formatting Demo</h3>
+        <p class="muted">Table includes thead, tbody, tfoot.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+                <th>Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HTML5</td>
+                <td>Structure</td>
+                <td>Advanced</td>
+              </tr>
+              <tr>
+                <td>CSS3</td>
+                <td>Design</td>
+                <td>Advanced</td>
+              </tr>
+              <tr>
+                <td>JavaScript</td>
+                <td>Interactivity</td>
+                <td>Intermediate</td>
+              </tr>
+              <tr>
+                <td>PHP</td>
+                <td>Backend</td>
+                <td>Intermediate</td>
+              </tr>
+              <tr>
+                <td>MySQL</td>
+                <td>Database</td>
+                <td>Intermediate</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Task-1 Table requirement completed ✔</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANALYTICS -->
+    <section class="section container" id="analytics">
+      <div class="section-head">
+        <h2>Analytics Dashboard</h2>
+        <p class="muted">
+          Visitor counter + page interactions stored using LocalStorage.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card metric">
+          <div class="metric-title">Total Visits</div>
+          <div class="metric-value" id="totalVisits">0</div>
+          <div class="metric-sub">Auto increases per refresh</div>
+        </div>
+        <div class="card metric">
+          <div class="metric-title">Contact Form Submits</div>
+          <div class="metric-value" id="totalSubmits">0</div>
+          <div class="metric-sub">Counts successful submits</div>
+        </div>
+        <div class="card metric">
+          <div class="metric-title">Projects Viewed</div>
+          <div class="metric-value" id="projectsViewed">0</div>
+          <div class="metric-sub">Counts project clicks</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Activity Log</h3>
+        <p class="muted">Stored locally (for demo) and can be extended.</p>
+        <div class="log" id="activityLog"></div>
+        <button class="btn danger" id="resetAnalytics">Reset Analytics</button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container" id="contact">
+      <div class="section-head">
+        <h2>Contact Form (JS + PHP + MySQL)</h2>
+        <p class="muted">
+          Includes input/select/textarea/radio/checkbox with validation.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <form class="card form" id="contactForm">
+          <div class="form-row">
+            <label>Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required />
+          </div>
+
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" required />
+          </div>
+
+          <div class="form-row">
+            <label>Password (Demo Validation)</label>
+            <input type="password" name="password" id="password" placeholder="Min 6 characters" required />
+          </div>
+
+          <div class="form-row">
+            <label>Category</label>
+            <select name="category" id="category">
+              <option value="General">General</option>
+              <option value="Project">Project</option>
+              <option value="Internship">Internship</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>Preferred Contact</label>
+            <div class="radio-wrap">
+              <label><input type="radio" name="contact_method" value="Email" checked /> Email</label>
+              <label><input type="radio" name="contact_method" value="Phone" /> Phone</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Services Needed</label>
+            <div class="check-wrap">
+              <label><input type="checkbox" name="services[]" value="Website" /> Website</label>
+              <label><input type="checkbox" name="services[]" value="UI Design" /> UI Design</label>
+              <label><input type="checkbox" name="services[]" value="Backend" /> Backend</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Message</label>
+            <textarea name="message" id="message" rows="5" placeholder="Write your message..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn primary">Send Message</button>
+          <div class="form-msg" id="formMsg"></div>
+        </form>
+
+        <div class="card">
+          <h3>Backend API Demo</h3>
+          <p class="muted">
+            The form submits to PHP API and saves into MySQL.
+          </p>
+
+          <div class="api-box">
+            <p><b>API Endpoint:</b></p>
+            <code>api/save_message.php</code>
+            <p><b>View Messages:</b></p>
+            <code>api/get_messages.php</code>
+          </div>
+
+          <div class="note">
+            <p><b>Run Instructions:</b></p>
+            <ol>
+              <li>Install XAMPP</li>
+              <li>Put folder inside <code>htdocs</code></li>
+              <li>Import SQL from <code>db/database.sql</code></li>
+              <li>Open <code>http://localhost/ApexPlanet_Task1_Impressive_Portfolio</code></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-wrap">
+        <p>© 2026 ApexPlanet Portfolio | Task-1 Completed</p>
+        <div class="footer-links">
+          <a href="#home">Top</a>
+          <a href="hello.php" target="_blank">hello.php</a>
+          <a href="api/get_messages.php" target="_blank">API Messages</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
